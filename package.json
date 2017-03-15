@@ -1,0 +1,42 @@
+{
+  "name": "vote-app",
+  "version": "1.0.0",
+  "description": "A Voting app's server component, done by Redux and Socket.IO",
+  "main": "index.js",
+  "repository": "https://github.com/ana-0/reactredux-app.git",
+  "author": "Harri Mähönen",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-env": "^1.2.1",
+    "immutable": "^3.8.1",
+    "redux": "^3.6.0",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-immutable": "^1.6.0",
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "start": "babel-node index.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
+    "test:watch": "yarn run test -- --watch"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "ie >= 7"
+            ]
+          }
+        }
+      ]
+    ]
+  }
+}
